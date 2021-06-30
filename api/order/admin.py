@@ -6,4 +6,4 @@ from .models import Order
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ()
+    list_display = ("user", "total_amount", "transaction_id")

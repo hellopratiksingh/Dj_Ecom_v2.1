@@ -62,7 +62,6 @@ def signin(request):
 
 def signout(request, id):
     logout(request)
-
     UserModel = get_user_model()
 
     try:
@@ -74,6 +73,7 @@ def signout(request, id):
         return JsonResponse({'error': 'Invalid user ID'})
 
     return JsonResponse({'success': 'Logout success'})
+    
 
 
 class UserViewSet(viewsets.ModelViewSet):
