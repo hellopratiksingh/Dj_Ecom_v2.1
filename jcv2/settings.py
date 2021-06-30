@@ -41,7 +41,12 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
-    'api'
+    'api',
+    'api.category',
+    'api.product',
+    'api.user',
+    'api.order',
+    'api.payment'
 ]
 
 MIDDLEWARE = [
@@ -128,6 +133,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+AUTH_USER_MODEL = "user.CustomUser"
 
 CORS_ORIGIN_ALLOW_ALL = True
 
